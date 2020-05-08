@@ -1,0 +1,170 @@
+<<<<<<< Original<?xml version="1.0" encoding="utf-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android"
+package="cn.edu.sdwu.android02.classroom.sn170507180220">
+
+<!-- 读取通讯录的权限 -->
+
+<uses-permission android:name="android.permission.READ_CONTACTS" />
+
+<!-- 声明读取写入SD卡的权限 -->
+
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+<!--打电话权限-->
+
+<uses-permission android:name="android.permission.CALL_PHONE" />
+
+<!--发消息-->
+
+<uses-permission android:name="android.permission.SEND_SMS" />
+
+<!--相机-->
+
+<uses-permission android:name="android.permission.CAMERA" />
+
+
+<application
+
+    android:allowBackup="true"
+
+    android:icon="@mipmap/ic_launcher"
+
+    android:label="梁雯霞"
+
+    android:roundIcon="@mipmap/ic_launcher_round"
+
+    android:supportsRtl="true"
+
+    android:theme="@style/AppTheme">
+
+    <activity android:name=".MainActivity" />
+
+    <activity android:name=".Ch10Activity1">
+
+
+        <!-- 过滤器三部分构成 action代表动作 data代表数据 category代表类别 -->
+
+        <!-- ch10Activity2过滤器关联代码，实现跳转到上一个界面 -->
+
+        <intent-filter>
+
+            <action android:name="com.inspur.action2" />
+
+
+            <category android:name="android.intent.category.DEFAULT" />
+
+
+            <data
+
+                android:host="inspur.com"
+
+                android:scheme="abc" /> <!-- scheme代表协议 host代表主机 -->
+
+        </intent-filter>
+
+    </activity>
+
+    <activity android:name=".Ch10Activity2" />
+
+
+    <!-- ch10Activity2的广播代码 -->
+
+    <receiver
+
+        android:name=".MyReceiver"
+
+        android:enabled="true"
+
+        android:exported="true">
+
+        <intent-filter>
+
+            <action android:name="com.inspur.broadcast" />
+
+        </intent-filter>
+
+    </receiver>
+
+
+    <activity android:name=".Ch10Activity3" />
+
+
+    <service
+
+        android:name=".MyService"
+
+        android:enabled="true"
+
+        android:exported="true" />
+
+
+    <activity android:name=".Ch12Activity1" />
+
+
+    <service
+
+        android:name=".MyService2"
+
+        android:enabled="true"
+
+        android:exported="true" />
+
+    <service
+
+        android:name=".MediaService"
+
+        android:enabled="true"
+
+        android:exported="true" />
+
+
+    <activity android:name=".Ch12Activity2" />
+
+    <activity android:name=".Ch13Activity1" />
+
+    <activity android:name=".Ch14Activity1"></activity>
+
+
+    <!-- android:authorities="com.inspur.android02"  授权者 -->
+
+    <provider
+
+        android:name=".MyContentProvider"
+
+        android:authorities="com.inspur.android02"
+
+        android:enabled="true"
+
+        android:exported="true" />
+
+
+    <activity android:name=".Ch15Activity1">
+
+
+    </activity>
+
+    <activity android:name=".Ch16Activity1">
+
+        <intent-filter>
+
+            <action android:name="android.intent.action.MAIN" />
+
+
+            <category android:name="android.intent.category.LAUNCHER" />
+
+        </intent-filter>
+
+    </activity>
+
+</application>
+
+
+</manifest>=======<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+<application>
+    <provider android:name="cn.edu.sdwu.android02.classroom.sn170507180220.MyContentProvider"
+        android:authorities="content" android:exported="true" android:enabled="true"></provider>
+</application>
+
+</manifest>>>>>>>> Added
